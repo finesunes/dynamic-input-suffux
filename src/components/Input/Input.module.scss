@@ -6,43 +6,42 @@
   font-size: 30px;
   line-height: 32px;
   font-family: sans-serif;
+}
 
-  .input {
-    font-size: inherit;
-    line-height: inherit;
-    font-family: inherit;
-    width: 100%;
-    background-color: #FFFFFF;
-    outline: none;
-    border: 1px solid #007BFF;
-    border-radius: 10px;
-  }
+.input {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  width: 100%;
+  background-color: #FFFFFF;
+  outline: none;
+  border: 1px solid #007BFF;
+  border-radius: 10px;
+}
 
-  .inputFakeValueWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    visibility: hidden;
-    user-select: none;
-    pointer-events: none;
-    font-size: inherit;
-    line-height: inherit;
-    font-family: inherit;
+.inputFakeValueWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
 
-    .inputFakeValue {
-      visibility: hidden;
-      overflow: hidden;
-    }
+.inputFakeValue {
+  overflow: hidden;
+}
 
-    .suffix {
-      visibility: visible;
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
-  }
+.suffix {
+  visibility: visible;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
