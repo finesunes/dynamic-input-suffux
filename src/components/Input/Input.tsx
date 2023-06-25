@@ -18,6 +18,9 @@ export type InputProps = Omit<
   suffix?: ReactNode
 }
 
+const inputPadding = 20 as const
+const suffixGap = 10 as const
+
 export const Input: FC<InputProps> = ({
   value,
   placeholder,
@@ -31,7 +34,11 @@ export const Input: FC<InputProps> = ({
 
   useLayoutEffect(() => {
     const suffixWidth = suffixRef.current?.getBoundingClientRect()
-    setInputRightPadding(suffix && suffixWidth ? suffixWidth.width + 15 : 10)
+    setInputRightPadding(
+      suffix && suffixWidth
+        ? suffixWidth.width + (inputPadding + suffixGap)
+        : inputPadding,
+    )
   }, [suffix])
 
   return (
@@ -39,13 +46,17 @@ export const Input: FC<InputProps> = ({
       <input
         className={clsx(styles.input, className)}
         style={{
+          padding: inputPadding,
           paddingRight: inputRightPadding,
         }}
         value={value}
         placeholder={placeholder}
         {...props}
       />
-      <div className={styles.inputFakeValueWrapper}>
+      <div
+        className={styles.inputFakeValueWrapper}
+        style={{ gap: suffixGap, padding: inputPadding }}
+      >
         <span className={styles.inputFakeValue}>{value || placeholder}</span>
         <span ref={suffixRef} className={styles.suffix}>
           {suffix}

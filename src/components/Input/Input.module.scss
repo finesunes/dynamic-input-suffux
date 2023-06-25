@@ -1,12 +1,10 @@
-$inputPadding: 10px;
-
 .inputWrapper {
   display: flex;
-  width: 250px;
-  height: 60px;
+  width: 400px;
+  height: 80px;
   position: relative;
-  font-size: 22px;
-  line-height: 25px;
+  font-size: 30px;
+  line-height: 32px;
   font-family: sans-serif;
 
   .input {
@@ -17,7 +15,6 @@ $inputPadding: 10px;
     background-color: #FFFFFF;
     outline: none;
     border: 1px solid #007BFF;
-    padding: $inputPadding;
     border-radius: 10px;
   }
 
@@ -27,13 +24,11 @@ $inputPadding: 10px;
     left: 0;
     bottom: 0;
     right: 0;
-    padding: $inputPadding;
     display: flex;
     align-items: center;
     visibility: hidden;
     user-select: none;
     pointer-events: none;
-    gap: 10px;
     font-size: inherit;
     line-height: inherit;
     font-family: inherit;
