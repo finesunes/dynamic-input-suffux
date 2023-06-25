@@ -1,0 +1,60 @@
+{
+    "plugins": [
+        "prettier",
+        "react-hooks"
+    ],
+    "extends": [
+        "prettier",
+        "react-app"
+    ],
+    "rules": {
+        "react/self-closing-comp": "warn",
+        "prettier/prettier": [
+            "warn",
+            {
+                "endOfLine": "auto"
+            },
+            {
+                "usePrettierrc": true
+            }
+        ],
+        "curly": "warn",
+        "no-labels": "off",
+        "no-lonely-if": "warn",
+        "no-else-return": "warn",
+        "no-fallthrough": "off",
+        "import/no-anonymous-default-export": "off",
+        "react/jsx-no-target-blank": "off",
+        "import/order": [
+            "warn",
+            {
+                "pathGroups": [
+                  {
+                      "pattern": "_storybook_/**",
+                      "group": "internal",
+                      "position": "after"
+                  },
+                  {
+                    "pattern": "react",
+                    "group": "external",
+                    "position": "before"
+                  }
+                ],
+                "pathGroupsExcludedImportTypes": [],
+                "newlines-between": "always",
+                "groups": [
+                  "builtin",
+                  "external",
+                  "internal",
+                  "parent",
+                  "sibling",
+                  "index"
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
+}
