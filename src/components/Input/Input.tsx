@@ -33,10 +33,10 @@ export const Input: FC<InputProps> = ({
   const [inputRightPadding, setInputRightPadding] = useState<number>(0)
 
   useLayoutEffect(() => {
-    const suffixWidth = suffixRef.current?.getBoundingClientRect()
+    const suffixWidth = suffixRef.current?.offsetWidth
     setInputRightPadding(
       suffix && suffixWidth
-        ? suffixWidth.width + (inputPadding + suffixGap)
+        ? suffixWidth + (inputPadding + suffixGap)
         : inputPadding,
     )
   }, [suffix])
